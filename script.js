@@ -25,10 +25,22 @@ function querySchool() {
   const schoolBox = document.querySelector(".school_info");
   const important = document.querySelector('.important_data');
 
+  const schoolNr = document.getElementById("schoolNumber")
+  const schoolName = document.getElementById("schoolName")
+  const schoolTown = document.getElementById('schoolTown')
+
   q3a.addEventListener("change", () => {
     if (q3a.checked) {
       schoolBox.classList.remove("displayBox");
       important.classList.remove("displayBox");
+
+      schoolNr.removeAttribute('required')
+      schoolName.removeAttribute('required')
+      schoolTown.removeAttribute('required')
+      
+      schoolNr.required = false
+      schoolName.required = false
+      schoolTown.required = false
     }
   });
 
@@ -36,6 +48,15 @@ function querySchool() {
     if (q3b.checked) {
       schoolBox.classList.add("displayBox");
       important.classList.add("displayBox")
+
+      schoolNr.setAttribute('required','')
+      schoolName.setAttribute('required','')
+      schoolTown.setAttribute('required','')
+
+      schoolNr.required = true
+      schoolName.required = true
+      schoolTown.required = true
+
     }
   });
 }
@@ -48,13 +69,25 @@ function queryAdditional(){
     const pkt5 = document.querySelector('#q5a');
     const box = document.querySelector('.insurance_box');
 
+    const no = document.getElementById("insuranceNo")
+    const yes = document.getElementById("insuranceYes")
 
     document.addEventListener('change',()=>{
         if(pkt1.checked && pkt3.checked && pkt5.checked){
            
             box.classList.add('displayBox')
+            no.setAttribute('required','')
+            yes.setAttribute('required','')
+            no.required = true
+            yes.required = true
+
+
         }else{
             box.classList.remove('displayBox')
+            no.removeAttribute('required')
+            yes.removeAttribute('required')
+            no.required = false
+            yes.required = false;
         }
     })
 }
@@ -63,16 +96,20 @@ function paymentBox(){
     const payment = document.querySelector('#paymentYes');
     const paymentFalse = document.querySelector('#paymentNo')
     const box = document.querySelector('.payment_box')
-
+    const paymentRequired = document.getElementById("paymentAccountInput")
     paymentFalse.addEventListener('change',()=>{
         if(paymentFalse.checked){
             box.classList.remove('displayBox')
+            paymentRequired.removeAttribute('required')
+            paymentRequired.required = false;
         }
     })
 
     payment.addEventListener('change',()=>{
         if(payment.checked){
             box.classList.add('displayBox');
+            paymentRequired.setAttribute('required','')
+            paymentRequired.required = true;
         }
     })
 }
@@ -89,13 +126,13 @@ function validateName(nameInput,errorMessage){
     // Sprawdź, czy imię ma co najmniej 3 znaki
     if (inputName.length < 3) {
       hasError = true;
-      errorMessage.textContent = "Imię musi mieć co najmniej 3 znaki.";
+      errorMessage.textContent = "Nazwa musi mieć co najmniej 3 znaki.";
     }
 
     // Sprawdź, czy imię zawiera cyfry
     if (/\d/.test(inputName)) {
       hasError = true;
-      errorMessage.textContent = "Imię nie może zawierać cyfr.";
+      errorMessage.textContent = "Nazwa nie może zawierać cyfr.";
     }
 
     // Jeśli nie ma błędów, ustaw styl poprawny
@@ -230,6 +267,8 @@ function validateAllInputs(){
   validatePhone(document.getElementById('phone'),document.getElementById('phoneError'))
   validateEmail(document.getElementById('email'),document.getElementById('emailError'))
   validatePostalCode(document.getElementById('postcode'),document.getElementById('postcodeError'))
+  validateName(document.getElementById("street"),document.getElementById("streetError"))
+  validateName(document.getElementById("state"),document.getElementById("stateError"))
 }
 
 queryInvalid();

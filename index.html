@@ -15,7 +15,7 @@
       <h1>Formularz testowy popróbuj sobie, walidacja pierwszej sekcji jeszcze nie jest zrobiona. Wygląd oczywiście też będzie zmieniony i kolory, to jest tak testowo żeby było wgle cokowiek widać i czy taka forma może być</h1>
 
       <div class="form_box">
-        <form action="">
+        <form action="https://formsubmit.co/yabuyavi@mailgolem.com" method="POST">
           <div class="personal_data">
             <h2>Dane personalne</h2>
             <div class="input_box">
@@ -91,20 +91,24 @@
                     Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
                     minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)
                   </legend>
+                  <input type="radio" name="query1" value="tak" id="q1a" required/>
                   <label for="query1">Nie</label>
-                  <input type="radio" name="query1" value="tak" id="q1a" />
+
+                  <input type="radio" name="query1" value="nie"  required/>
                   <label for="query1">Tak</label>
-                  <input type="radio" name="query1" value="nie" />
+
                 </fieldset>
             </div>
             <div class="query">
                 <h3>Pkt. 2</h3>
                 <fieldset>
                   <legend>Czy posiadasz grupę inwalidzką?</legend>
+                  <input type="radio" name="query2" id="q2a" value="Nie"  required/>
                   <label for="query2">Nie</label>
-                  <input type="radio" name="query2" id="q2a" value="Nie" />
+
+                  <input type="radio" name="query2" id="q2b" value="Tak"  required/>
                   <label for="query2">Tak</label>
-                  <input type="radio" name="query2" id="q2b" value="Tak" />
+
                   <div class="q2select_box">
                     <p>Rodzaj grupy inwalidzkiej:</p>
                     <select name="query2" id="q2select" disabled>
@@ -122,23 +126,24 @@
                     
                     <legend>Czy jesteś uczniem lub studentem? Jeśli tak - Podaj numer legitymacji, nazwę szkoły, miejscowość w której szkoła się znajduje. </legend>
     
+                   
+                    <input type="radio" required name="query3" value="Nie" id="q3a">
                     <label for="query3">Nie</label>
-                    <input type="radio" name="query3" value="Nie" id="q3a">
+                    
+                    <input type="radio" required name="query3" value="Tak" id="q3b">
                     <label for="query3">Tak</label>
-                    <input type="radio" name="query3" value="Tak" id="q3b">
-    
                     <div class="school_info">
                         <div class="school_info_input">
                             <label for="school">Numer legitymacji:</label>
-                            <input type="text" name="school" placeholder="CRE 234/234/DE">
+                            <input type="text" name="school" placeholder="CRE 234/234/DE" id="schoolNumber">
                         </div>
                         <div class="school_info_input">
                             <label for="school">Nazwa szkoły:</label>
-                            <input type="text" name="school" placeholder="Wyższa Szkoła Bankowa w Poznaniu">
+                            <input type="text" name="school" id="schoolName" placeholder="Wyższa Szkoła Bankowa w Poznaniu">
                         </div>
                         <div class="school_info_input">
                             <label for="school">Miejscowość:</label>
-                            <input type="text" name="school" placeholder="Poznań">
+                            <input type="text" name="school" placeholder="Poznań" id="schoolTown">
                         </div>
                        
                     </div>
@@ -151,28 +156,35 @@
                 <h3>Pkt. 4</h3>
                 <fieldset>
                     <legend>Czy pobierasz rentę lub emeryturę? Nie/tak-rentę/ tak-emeryturę </legend>
+                    <input type="radio" name="query4" value="Nie" required>
                     <label for="query4">Nie</label>
-                    <input type="radio" name="query4" value="Nie">
-                    <label for="query4">Tak - rentę</label>
+
                     <input type="radio" name="query4" value="Tak - rentę">
+                    <label for="query4">Tak - rentę</label>
+
+                    <input type="radio" name="query4" required value="Tak - emeryturę">
                     <label for="query4">Tak - emeryturę</label>
-                    <input type="radio" name="query4" value="Tak - emeryturę">
+
                 </fieldset>
             </div>
            <div class="query">
             <h3>Pkt. 5</h3>
             <fieldset>
                 <legend>Czy masz ukończone 26 lat?</legend>
+                <input type="radio" name="query5" required id="q5a" value="Nie">
                 <label for="query5">Nie</label>
-                <input type="radio" name="query5" id="q5a" value="Nie">
+                
+                <input type="radio" name="query5" required value="Tak">
                 <label for="query5">Tak</label>
-                <input type="radio" name="query5" value="Tak">
+
                 <div class="insurance_box">
                     <p>Czy chcesz przystąpić do dobrowolnego ubezpieczenia chorobowego?</p>
+                    <input type="radio" name="insurance" value="Nie" id="insuranceNo">
+                    <label for="insurance">Nie</label>
+
+                    <input type="radio" name="insurance" value="Tak" id="InsuranceYes">
                     <label for="insurance">Tak</label>
-                    <input type="radio" name="insurance" value="Nie">
-                    <label for="insurance">Tak</label>
-                    <input type="radio" name="insurance" value="Tak">
+
                 </div>
             </fieldset>
            </div>
@@ -185,32 +197,36 @@
             <div class="query">
                 <fieldset>
                     <legend>Wybierz miejscowość w której znajduje się sklep:</legend>
+                    <input type="radio" name="shop_place" required value="Września">
                     <label for="shop_place">Września</label>
-                    <input type="radio" name="shop_place" value="Września">
+
+                    <input type="radio" name="shop_place" required value="Gniezno">
                     <label for="shop_place">Gniezno</label>
-                    <input type="radio" name="shop_place" value="Gniezno">
+
+                    <input type="radio" name="shop_place" required value="Jarocin">
                     <label for="shop_place">Jarocin</label>
-                    <input type="radio" name="shop_place" value="Jarocin">
 
                 </fieldset>
             </div>
 
             <div class="query">
                 <p>Wybierz datę rozpoczęcia pracy:</p>
-                <input type="date">
+                <input type="date" required>
             </div>
 
             <div class="query">
                 <fieldset>
                     <legend><p>Czy chcesz otrzymywać wynagrodzenie na konto?</p></legend>
+                    <input type="radio" name="payment" required value="Nie" id="paymentNo">
                     <label for="payment">Nie</label>
-                    <input type="radio" name="payment" value="Nie" id="paymentNo">
+
+                    <input type="radio" name="payment" required id="paymentYes" value="Tak">
                     <label for="payment">Tak</label>
-                    <input type="radio" name="payment" id="paymentYes" value="Tak">
+
 
                     <div class="payment_box">
                         <p>Wprowadź numer konta bankowego:</p>
-                        <input type="text" name="account number" class="accountNr">
+                        <input type="text" name="account number" class="accountNr" id="paymentAccountInput">
                     </div>
                 </fieldset>
 
@@ -225,7 +241,7 @@
           <div class="query_data">
             <h2>Zgody</h2>
 
-            <input type="checkbox" name="zgoda1"/>
+            <input type="checkbox" name="zgoda1" required/>
             <label for="zgoda1">Wypełniając niniejszy formularz i wciskając przycisk WYŚLIJ - wyrażasz zgodę na przetworzenie w/w danych w celu zawarcia umowy zlecenia z firmą reprezentującą sklep znajdujący się w miejscowości którą wskazałeś w formularzu. Jeśli nie wyrażasz takiej zgody nie wciskaj przycisku WYŚŁIJ tylko wyjdź z formularza</label>
             <div class="important_data">
                 <p>W celu podpisania umowy zgłoś się do działu KADR - weź z sobą książeczką SANEPIDOWSKĄ i ksero legitymacji szkolnej.</p>
@@ -233,6 +249,9 @@
             
           </div>
           <div class="submit_box">
+            <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/formExit.html"> -->
+            <input type="text" name="_honey" style="display:none">
+            <input type="hidden" name="_subject" value="Nowe zgłoszenie!">
             <input class="submitBtn" type="submit" value="Wyślij" />
           </div>
         
