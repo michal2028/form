@@ -23,7 +23,7 @@ html{
     flex-direction: column;
 }
 
-input[type="text"]{
+input[type="text"],input[type="email"]{
     padding: .5em;
     border-radius: 15px;
 }
@@ -100,6 +100,10 @@ fieldset{
     text-transform: uppercase;
     background-color: green;
     color: aliceblue;
+}
+
+.submitBtn:disabled{
+    background-color: #bfbdbd;
 }
 
 .submit_box{
