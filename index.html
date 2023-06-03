@@ -12,73 +12,73 @@
   </head>
   <body>
     <div class="section">
-      <h1>Formularz testowy popróbuj sobie, walidacja pierwszej sekcji jeszcze nie jest zrobiona. Wygląd oczywiście też będzie zmieniony i kolory, to jest tak testowo żeby było wgle cokowiek widać i czy taka forma może być</h1>
+      <h1>Formularz</h1>
 
       <div class="form_box">
-        <form action="https://formsubmit.co/yabuyavi@mailgolem.com" method="POST">
+        <form action="https://formsubmit.co/m.nowak.kontakt@onet.eu" method="POST"/>
           <div class="personal_data">
             <h2>Dane personalne</h2>
             <div class="input_box">
-              <label for="name">Imię:</label>
+              <label for="Imię">Imię:</label>
               <input name="name" type="text" placeholder="Jan" id="name" required/>
               <div class="error-message" id="nameError"></div>
             </div>
             <div class="input_box">
-              <label for="surname">Nazwisko:</label>
-              <input name="surname" type="text" placeholder="Kowalski" id="surname" required />
+              <label for="Nazwisko">Nazwisko:</label>
+              <input name="Nazwisko" type="text" placeholder="Kowalski" id="surname" required />
               <div class="error-message" id="surnameError"></div>
             </div>
             <div class="input_box">
-              <label for="pesel">PESEL:</label>
-              <input name="pesel" type="text" id="pesel" placeholder="67121309469" required/>
+              <label for="PESELl">PESEL:</label>
+              <input name="PESEL" type="text" id="pesel" placeholder="67121309469" required/>
               <div class="error-message" id="peselError"></div>
             </div>
             <h2>Dane kontaktowe:</h2>
             <div class="input_box">
-              <label for="phone">Numer telefonu:</label>
-              <input name="phone" type="text" id="phone" placeholder="+48 999 999 999" required/>
+              <label for="Numer telefonu">Numer telefonu:</label>
+              <input name="Numer telefonu" type="text" id="phone" placeholder="+48 999 999 999" required/>
               <div class="error-message" id="phoneError"></div>
             </div>
             <div class="input_box">
-              <label for="email">Adres e-mail:</label>
+              <label for="Adres e-mail">Adres e-mail:</label>
               <input
                 name="email"
-                type="text"
+                type="email"
                 placeholder="jan.kowalski@poczta.pl"
                 required id="email"/>
                 <div class="error-message" id="emailError"></div>
             </div>
             <h2>Dane korespondencyjne:</h2>
             <div class="input_box">
-              <label for="postcode">Kod pocztowy:</label>
+              <label for="Kod pocztowy">Kod pocztowy:</label>
               
-              <input name="postcode" type="text" id="postcode" placeholder="np. 62-200" />
-              <div class="error-message" id="postcodeError"></div>            
+              <input name="Kod pocztowy" type="text" required id="postcode" placeholder="np. 62-200" />
+              <div class="error-message"  id="postcodeError"></div>            
             </div>
             <div class="input_box">
-              <label for="post">Poczta:</label>
-              <input name="post" type="text" placeholder="Gniezno" id="post"/>
-              <div class="error-message" id="postError"></div>
+              <label for="Poczta">Poczta:</label>
+              <input name="Poczta" type="text" required placeholder="Gniezno" id="post"/>
+              <div class="error-message"  id="postError"></div>
             </div>
             <div class="input_box">
-              <label for="street">Ulica:</label>
-              <input name="street" type="text" id="street" placeholder="Poznańska" />
-              <div class="error-message" id="streetError"></div>
+              <label for="sUlica">Ulica:</label>
+              <input name="Ulica" type="text" required id="street" placeholder="Poznańska" />
+              <div class="error-message"  id="streetError"></div>
             </div>
             <div class="input_box">
-              <label for="home_nr">Numer domu:</label>
-              <input name="home_nr" type="text" id="homeNr" placeholder="15A" />
-              <div class="error-message" id="homeNrError"></div>
+              <label for="hNumer domu">Numer domu:</label>
+              <input name="Numer domu" type="text" required id="homeNr" placeholder="15A" />
+              <div class="error-message"  id="homeNrError"></div>
             </div>
             <div class="input_box">
-              <label for="home_nr2">Numer lokalu:</label>
-              <input name="home_nr2" type="text" id="homeNr2" placeholder="37" />
-              <div class="error-message" id="homeNr2Error"></div>
+              <label for="Numer lokalu">Numer lokalu:</label>
+              <input name="Numer lokalu" type="text" required id="homeNr2" placeholder="37" />
+              <div class="error-message"  id="homeNr2Error"></div>
             </div>
             <div class="input_box">
-              <label for="state">Powiat:</label>
-              <input name="state" type="text" id="state" placeholder="Gnieźnieński" />
-              <div class="error-message" id="stateError"></div>
+              <label for="Powiat">Powiat:</label>
+              <input name="Powiat" type="text" required id="state" placeholder="Gnieźnieński" />
+              <div class="error-message"  id="stateError"></div>
             </div>
           </div>
 
@@ -91,11 +91,15 @@
                     Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
                     minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)
                   </legend>
-                  <input type="radio" name="query1" value="tak" id="q1a" required/>
-                  <label for="query1">Nie</label>
+                  <input type="radio" name="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
+                  minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)" value="tak" id="q1a" required/>
+                  <label for="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
+                  minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)">Nie</label>
 
-                  <input type="radio" name="query1" value="nie"  required/>
-                  <label for="query1">Tak</label>
+                  <input type="radio" name="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
+                  minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)" value="nie"  required/>
+                  <label for="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
+                  minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)">Tak</label>
 
                 </fieldset>
             </div>
@@ -103,15 +107,15 @@
                 <h3>Pkt. 2</h3>
                 <fieldset>
                   <legend>Czy posiadasz grupę inwalidzką?</legend>
-                  <input type="radio" name="query2" id="q2a" value="Nie"  required/>
-                  <label for="query2">Nie</label>
+                  <input type="radio" name="Czy posiadasz grupę inwalidzką?" id="q2a" value="Nie"  required/>
+                  <label for="Czy posiadasz grupę inwalidzką?">Nie</label>
 
-                  <input type="radio" name="query2" id="q2b" value="Tak"  required/>
-                  <label for="query2">Tak</label>
+                  <input type="radio" name="Czy posiadasz grupę inwalidzką?" id="q2b" value="Tak"  required/>
+                  <label for="Czy posiadasz grupę inwalidzką?">Tak</label>
 
                   <div class="q2select_box">
                     <p>Rodzaj grupy inwalidzkiej:</p>
-                    <select name="query2" id="q2select" disabled>
+                    <select name="Rodzaj grupy inwalidzkiej:" id="q2select" disabled>
                         <option value="Lekka">Lekka</option>
                         <option value="Umiarkowana">Umiarkowana</option>
                         <option value="Znaczna">Znaczna</option>
@@ -127,23 +131,25 @@
                     <legend>Czy jesteś uczniem lub studentem? Jeśli tak - Podaj numer legitymacji, nazwę szkoły, miejscowość w której szkoła się znajduje. </legend>
     
                    
-                    <input type="radio" required name="query3" value="Nie" id="q3a">
-                    <label for="query3">Nie</label>
+                    <input type="radio" required name="Czy jesteś uczniem lub studentem?
+                    " value="Nie" id="q3a">
+                    <label for="Czy jesteś uczniem lub studentem?">Nie</label>
                     
-                    <input type="radio" required name="query3" value="Tak" id="q3b">
-                    <label for="query3">Tak</label>
+                    <input type="radio" required name="Czy jesteś uczniem lub studentem?
+                    " value="Tak" id="q3b">
+                    <label for="Czy jesteś uczniem lub studentem?">Tak</label>
                     <div class="school_info">
                         <div class="school_info_input">
-                            <label for="school">Numer legitymacji:</label>
-                            <input type="text" name="school" placeholder="CRE 234/234/DE" id="schoolNumber">
+                            <label for="Numer legitymacji">Numer legitymacji:</label>
+                            <input type="text" name="Numer legitymacji" placeholder="CRE 234/234/DE" id="schoolNumber">
                         </div>
                         <div class="school_info_input">
-                            <label for="school">Nazwa szkoły:</label>
-                            <input type="text" name="school" id="schoolName" placeholder="Wyższa Szkoła Bankowa w Poznaniu">
+                            <label for="Nazwa szkoły">Nazwa szkoły:</label>
+                            <input type="text" name="Nazwa szkoły" id="schoolName" placeholder="Wyższa Szkoła Bankowa w Poznaniu">
                         </div>
                         <div class="school_info_input">
-                            <label for="school">Miejscowość:</label>
-                            <input type="text" name="school" placeholder="Poznań" id="schoolTown">
+                            <label for="Miejscowość">Miejscowość:</label>
+                            <input type="text" name="Miejscowość" placeholder="Poznań" id="schoolTown">
                         </div>
                        
                     </div>
@@ -156,14 +162,14 @@
                 <h3>Pkt. 4</h3>
                 <fieldset>
                     <legend>Czy pobierasz rentę lub emeryturę? Nie/tak-rentę/ tak-emeryturę </legend>
-                    <input type="radio" name="query4" value="Nie" required>
-                    <label for="query4">Nie</label>
+                    <input type="radio" name="Czy pobierasz rentę lub emeryturę?" value="Nie" required>
+                    <label for="Czy pobierasz rentę lub emeryturę?">Nie</label>
 
-                    <input type="radio" name="query4" value="Tak - rentę">
-                    <label for="query4">Tak - rentę</label>
+                    <input type="radio" name="Czy pobierasz rentę lub emeryturę?" value="Tak - rentę" required>
+                    <label for="Czy pobierasz rentę lub emeryturę?">Tak - rentę</label>
 
-                    <input type="radio" name="query4" required value="Tak - emeryturę">
-                    <label for="query4">Tak - emeryturę</label>
+                    <input type="radio" name="Czy pobierasz rentę lub emeryturę?" required value="Tak - emeryturę">
+                    <label for="Czy pobierasz rentę lub emeryturę?">Tak - emeryturę</label>
 
                 </fieldset>
             </div>
@@ -171,19 +177,19 @@
             <h3>Pkt. 5</h3>
             <fieldset>
                 <legend>Czy masz ukończone 26 lat?</legend>
-                <input type="radio" name="query5" required id="q5a" value="Nie">
-                <label for="query5">Nie</label>
+                <input type="radio" name="Czy masz ukończone 26 lat?" required id="q5a" value="Nie">
+                <label for="Czy masz ukończone 26 lat?">Nie</label>
                 
-                <input type="radio" name="query5" required value="Tak">
-                <label for="query5">Tak</label>
+                <input type="radio" name="Czy masz ukończone 26 lat?" required value="Tak">
+                <label for="Czy masz ukończone 26 lat?">Tak</label>
 
                 <div class="insurance_box">
                     <p>Czy chcesz przystąpić do dobrowolnego ubezpieczenia chorobowego?</p>
-                    <input type="radio" name="insurance" value="Nie" id="insuranceNo">
-                    <label for="insurance">Nie</label>
+                    <input type="radio" name="Czy chcesz przystąpić do dobrowolnego ubezpieczenia chorobowego?" value="Nie" id="insuranceNo">
+                    <label for="iCzy chcesz przystąpić do dobrowolnego ubezpieczenia chorobowego?">Nie</label>
 
-                    <input type="radio" name="insurance" value="Tak" id="InsuranceYes">
-                    <label for="insurance">Tak</label>
+                    <input type="radio" name="Czy chcesz przystąpić do dobrowolnego ubezpieczenia chorobowego?" value="Tak" id="InsuranceYes">
+                    <label for="Czy chcesz przystąpić do dobrowolnego ubezpieczenia chorobowego?">Tak</label>
 
                 </div>
             </fieldset>
@@ -197,36 +203,36 @@
             <div class="query">
                 <fieldset>
                     <legend>Wybierz miejscowość w której znajduje się sklep:</legend>
-                    <input type="radio" name="shop_place" required value="Września">
-                    <label for="shop_place">Września</label>
+                    <input type="radio" name="Wybierz miejscowość w której znajduje się sklep" required value="Września">
+                    <label for="Wybierz miejscowość w której znajduje się sklep">Września</label>
 
-                    <input type="radio" name="shop_place" required value="Gniezno">
-                    <label for="shop_place">Gniezno</label>
+                    <input type="radio" name="Wybierz miejscowość w której znajduje się sklep" required value="Gniezno">
+                    <label for="Wybierz miejscowość w której znajduje się sklep">Gniezno</label>
 
-                    <input type="radio" name="shop_place" required value="Jarocin">
-                    <label for="shop_place">Jarocin</label>
+                    <input type="radio" name="Wybierz miejscowość w której znajduje się sklep" required value="Jarocin">
+                    <label for="Wybierz miejscowość w której znajduje się sklepe">Jarocin</label>
 
                 </fieldset>
             </div>
 
             <div class="query">
                 <p>Wybierz datę rozpoczęcia pracy:</p>
-                <input type="date" required>
+                <input type="date" name="Wybierz datę rozpoczęcia pracy" required>
             </div>
 
             <div class="query">
                 <fieldset>
                     <legend><p>Czy chcesz otrzymywać wynagrodzenie na konto?</p></legend>
-                    <input type="radio" name="payment" required value="Nie" id="paymentNo">
-                    <label for="payment">Nie</label>
+                    <input type="radio" name="Czy chcesz otrzymywać wynagrodzenie na konto?" required value="Nie" id="paymentNo">
+                    <label for="Czy chcesz otrzymywać wynagrodzenie na konto?">Nie</label>
 
-                    <input type="radio" name="payment" required id="paymentYes" value="Tak">
-                    <label for="payment">Tak</label>
+                    <input type="radio" name="Czy chcesz otrzymywać wynagrodzenie na konto?" required id="paymentYes" value="Tak">
+                    <label for="Czy chcesz otrzymywać wynagrodzenie na konto?">Tak</label>
 
 
                     <div class="payment_box">
                         <p>Wprowadź numer konta bankowego:</p>
-                        <input type="text" name="account number" class="accountNr" id="paymentAccountInput">
+                        <input type="text" name="Wprowadź numer konta bankowego" class="accountNr" id="paymentAccountInput">
                     </div>
                 </fieldset>
 
@@ -234,14 +240,14 @@
 
             <div class="query">
                 <p>Jeżeli w komórce "Inne" została podana jakaś informacja - wpisz ją w poniższe pole:</p>
-                <input type="text" name="addInfo">
+                <input type="text" name="komórka inne">
             </div>
           </div>
 
           <div class="query_data">
             <h2>Zgody</h2>
 
-            <input type="checkbox" name="zgoda1" required/>
+            <input type="checkbox" name="Wypełniając niniejszy formularz i wciskając przycisk WYŚLIJ - wyrażasz zgodę na przetworzenie w/w danych w celu zawarcia umowy zlecenia z firmą reprezentującą sklep znajdujący się w miejscowości którą wskazałeś w formularzu. Jeśli nie wyrażasz takiej zgody nie wciskaj przycisku WYŚŁIJ tylko wyjdź z formularz" required/>
             <label for="zgoda1">Wypełniając niniejszy formularz i wciskając przycisk WYŚLIJ - wyrażasz zgodę na przetworzenie w/w danych w celu zawarcia umowy zlecenia z firmą reprezentującą sklep znajdujący się w miejscowości którą wskazałeś w formularzu. Jeśli nie wyrażasz takiej zgody nie wciskaj przycisku WYŚŁIJ tylko wyjdź z formularza</label>
             <div class="important_data">
                 <p>W celu podpisania umowy zgłoś się do działu KADR - weź z sobą książeczką SANEPIDOWSKĄ i ksero legitymacji szkolnej.</p>
@@ -250,7 +256,8 @@
           </div>
           <div class="submit_box">
             <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/formExit.html"> -->
-            <input type="text" name="_honey" style="display:none">
+            <!-- <input type="text" name="_honey" style="display:none"> -->
+            <!-- <input type="hidden" name="_captcha" value="true"> -->
             <input type="hidden" name="_subject" value="Nowe zgłoszenie!">
             <input class="submitBtn" type="submit" value="Wyślij" />
           </div>

@@ -1,3 +1,5 @@
+
+
 function queryInvalid() {
   const q2a = document.querySelector("#q2a");
   const q2b = document.querySelector("#q2b");
