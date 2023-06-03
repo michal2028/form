@@ -1,4 +1,3 @@
-
 function queryInvalid() {
   const q2a = document.querySelector("#q2a");
   const q2b = document.querySelector("#q2b");
@@ -78,7 +77,163 @@ function paymentBox(){
     })
 }
 
+
+
+function validateName(nameInput,errorMessage){
+   
+
+  nameInput.addEventListener("input", function() {
+    var inputName = nameInput.value.trim();
+    var hasError = false;
+
+    // Sprawdź, czy imię ma co najmniej 3 znaki
+    if (inputName.length < 3) {
+      hasError = true;
+      errorMessage.textContent = "Imię musi mieć co najmniej 3 znaki.";
+    }
+
+    // Sprawdź, czy imię zawiera cyfry
+    if (/\d/.test(inputName)) {
+      hasError = true;
+      errorMessage.textContent = "Imię nie może zawierać cyfr.";
+    }
+
+    // Jeśli nie ma błędów, ustaw styl poprawny
+    if (!hasError) {
+      nameInput.classList.remove("error");
+      nameInput.classList.add("success");
+      errorMessage.style.display = "none";
+    } else {
+      nameInput.classList.remove("success");
+      nameInput.classList.add("error");
+      errorMessage.style.display = "block";
+    }
+  });
+}
+
+function validatePesel(peselInput,errorMessage){
+
+
+  peselInput.addEventListener("input", function() {
+    var inputPesel = peselInput.value.replace(/\s/g, ""); // Usuwanie białych znaków
+    var hasError = false;
+
+    // Sprawdzenie długości numeru PESEL
+    if (inputPesel.length !== 11) {
+      hasError = true;
+      errorMessage.textContent = "Numer PESEL musi składać się z 11 cyfr.";
+    }
+
+    // Sprawdzenie czy numer PESEL zawiera tylko cyfry
+    if (!/^\d+$/.test(inputPesel)) {
+      hasError = true;
+      errorMessage.textContent = "Numer PESEL może zawierać tylko cyfry.";
+    }
+
+    // Jeśli nie ma błędów, ustaw styl poprawny
+    if (!hasError) {
+      peselInput.classList.remove("error");
+      peselInput.classList.add("success");
+      errorMessage.style.display = "none";
+    } else {
+      peselInput.classList.remove("success");
+      peselInput.classList.add("error");
+      errorMessage.style.display = "block";
+    }
+  });
+}
+
+function validatePhone(input, errorDiv) {
+   // Pobranie wartości z pola tekstowego i usunięcie ewentualnych białych znaków
+
+  input.addEventListener("input",()=>{
+    const phoneNumber = input.value.trim();
+    const phoneRegex = /^(\+\d{1,3}\s?)?\d{1,3}(\s?\d{3}){2,3}$/;
+
+    if (!phoneRegex.test(phoneNumber)) {
+      input.classList.remove("success");
+      input.classList.add("error");
+      errorDiv.textContent = "Nieprawidłowy numer telefonu. Wprowadź 9 cyfr.";
+    } else {
+      input.classList.remove("error");
+      input.classList.add("success");
+      errorDiv.textContent  = "";
+    }
+  })
+  
+   // Wyrażenie regularne do sprawdzenia formatu numeru telefonu
+
+}
+
+function validateEmail(input, errorMessage) {
+
+  input.addEventListener('input',()=>{
+    var email = input.value.trim();
+    var hasError = false;
+  
+    // Sprawdzenie, czy pole tekstowe jest puste
+    if (email === "") {
+      hasError = true;
+      errorMessage.textContent = ""; // Czyszczenie komunikatu błędu
+    } else {
+      // Sprawdzenie poprawności adresu e-mail
+      var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        hasError = true;
+        errorMessage.textContent = "Podaj poprawny adres e-mail.";
+      }
+    }
+  
+    // Jeśli nie ma błędów, ustaw styl poprawny
+    if (!hasError) {
+      input.classList.remove("error");
+      input.classList.add("success");
+      errorMessage.style.display = "none";
+    } else {
+      input.classList.remove("success");
+      input.classList.add("error");
+      errorMessage.style.display = "block";
+    }
+  })
+
+}
+
+function validatePostalCode(input, errorDiv) {
+
+  input.addEventListener('input',()=>{
+    const postalCode = input.value.trim(); // Pobranie wartości z pola tekstowego i usunięcie ewentualnych białych znaków
+
+    // Wyrażenie regularne do sprawdzenia formatu kodu pocztowego
+    const postalCodeRegex = /^(\d{2}-\d{3}|\d{2}\s?\d{3}|\d{5})$/;
+  
+    if (!postalCodeRegex.test(postalCode)) {
+      input.classList.remove("success");
+      input.classList.add("error");
+      errorDiv.innerText = "Nieprawidłowy kod pocztowy. Wprowadź poprawny kod.";
+    } else {
+      input.classList.remove("error");
+      input.classList.add("success");
+      errorDiv.innerText = "";
+    }
+  })
+
+}
+
+
+function validateAllInputs(){
+  validateName(document.getElementById("name"),document.getElementById("nameError"));
+  validateName(document.getElementById("surname"),document.getElementById("surnameError"));
+  validateName(document.getElementById("post"),document.getElementById("postError"));
+  validateName(document.getElementById("surname"),document.getElementById("surnameError"));
+  validateName(document.getElementById("surname"),document.getElementById("surnameError"));
+  validatePesel(document.getElementById('pesel'),document.getElementById('peselError'))
+  validatePhone(document.getElementById('phone'),document.getElementById('phoneError'))
+  validateEmail(document.getElementById('email'),document.getElementById('emailError'))
+  validatePostalCode(document.getElementById('postcode'),document.getElementById('postcodeError'))
+}
+
 queryInvalid();
 querySchool();
 queryAdditional();
 paymentBox();
+validateAllInputs();

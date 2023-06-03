@@ -20,20 +20,24 @@
             <h2>Dane personalne</h2>
             <div class="input_box">
               <label for="name">Imię:</label>
-              <input name="name" type="text" placeholder="Jan" />
+              <input name="name" type="text" placeholder="Jan" id="name" required/>
+              <div class="error-message" id="nameError"></div>
             </div>
             <div class="input_box">
               <label for="surname">Nazwisko:</label>
-              <input name="surname" type="text" placeholder="Kowalski" />
+              <input name="surname" type="text" placeholder="Kowalski" id="surname" required />
+              <div class="error-message" id="surnameError"></div>
             </div>
             <div class="input_box">
               <label for="pesel">PESEL:</label>
-              <input name="pesel" type="text" placeholder="67121309469" />
+              <input name="pesel" type="text" id="pesel" placeholder="67121309469" required/>
+              <div class="error-message" id="peselError"></div>
             </div>
             <h2>Dane kontaktowe:</h2>
             <div class="input_box">
               <label for="phone">Numer telefonu:</label>
-              <input name="phone" type="text" placeholder="+48 999 999 999" />
+              <input name="phone" type="text" id="phone" placeholder="+48 999 999 999" required/>
+              <div class="error-message" id="phoneError"></div>
             </div>
             <div class="input_box">
               <label for="email">Adres e-mail:</label>
@@ -41,32 +45,40 @@
                 name="email"
                 type="text"
                 placeholder="jan.kowalski@poczta.pl"
-              />
+                required id="email"/>
+                <div class="error-message" id="emailError"></div>
             </div>
             <h2>Dane korespondencyjne:</h2>
             <div class="input_box">
               <label for="postcode">Kod pocztowy:</label>
-              <input name="postcode" type="text" placeholder="np. 62-200" />
+              
+              <input name="postcode" type="text" id="postcode" placeholder="np. 62-200" />
+              <div class="error-message" id="postcodeError"></div>            
             </div>
             <div class="input_box">
               <label for="post">Poczta:</label>
-              <input name="post" type="text" placeholder="Gniezno" />
+              <input name="post" type="text" placeholder="Gniezno" id="post"/>
+              <div class="error-message" id="postError"></div>
             </div>
             <div class="input_box">
               <label for="street">Ulica:</label>
-              <input name="street" type="text" placeholder="Poznańska" />
+              <input name="street" type="text" id="street" placeholder="Poznańska" />
+              <div class="error-message" id="streetError"></div>
             </div>
             <div class="input_box">
               <label for="home_nr">Numer domu:</label>
-              <input name="home_nr" type="text" placeholder="15A" />
+              <input name="home_nr" type="text" id="homeNr" placeholder="15A" />
+              <div class="error-message" id="homeNrError"></div>
             </div>
             <div class="input_box">
               <label for="home_nr2">Numer lokalu:</label>
-              <input name="home_nr2" type="text" placeholder="37" />
+              <input name="home_nr2" type="text" id="homeNr2" placeholder="37" />
+              <div class="error-message" id="homeNr2Error"></div>
             </div>
             <div class="input_box">
               <label for="state">Powiat:</label>
-              <input name="state" type="text" placeholder="Gnieźnieński" />
+              <input name="state" type="text" id="state" placeholder="Gnieźnieński" />
+              <div class="error-message" id="stateError"></div>
             </div>
           </div>
 
