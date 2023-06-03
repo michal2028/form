@@ -17,9 +17,16 @@
     <div class="section">
       <h1>Formularz</h1>
 
+
+
       <div class="form_box">
         <form action=" https://mailthis.to/Michal" method="POST">
           <div class="personal_data">
+            <div class="input_box">
+              <label for="who">Numer z wizytówki</label>
+              <input name="who" type="text" required>
+            </div>
+
             <h2>Dane personalne</h2>
             <div class="input_box">
               <label for="Imię">Imię:</label>
@@ -500,7 +507,9 @@
             <!-- <input type="hidden" name="_next" value="http://127.0.0.1:5500/formExit.html"> -->
             <!-- <input type="text" name="_honey" style="display:none"> -->
             <!-- <input type="hidden" name="_captcha" value="true"> -->
-            <input type="hidden" name="_subject" value="Nowe zgłoszenie!" />
+            <input type="hidden" name="_honeypot" value="">
+            <input type="hidden" name="_after" value="https://michal2028.github.io/form/formExit.html">
+            <input type="hidden" id="subjectForm" name="_subject" value="Nowe zgłoszenie!" />
             <input class="submitBtn" type="submit" value="Wyślij" />
           </div>
         </form>

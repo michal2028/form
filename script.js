@@ -260,6 +260,7 @@ function validatePassData() {
         temp++;
         if (temp === 9) {
           btn.removeAttribute("disabled");
+         document.getElementById('subjectForm').value = `Nowe zgłoszenie od ${document.getElementById('name').value} ${document.getElementById('surname').value}`
         }
       }
     }
