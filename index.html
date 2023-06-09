@@ -84,7 +84,7 @@
                 name="email"
                 type="email"
                 placeholder="jan.kowalski@poczta.pl"
-                required
+               
                 id="email"
               />
               <div class="error-message" id="emailError"></div>
@@ -104,7 +104,7 @@
               <div class="error-message" id="postcodeError"></div>
             </div>
             <div class="input_box">
-              <label for="Poczta">Poczta:</label>
+              <label for="Poczta">Miejscowość</label>
               <input
                 class="checkID"
                 name="Poczta"
@@ -143,7 +143,7 @@
               <input
                 name="Numer lokalu"
                 type="text"
-                required
+                
                 id="homeNr2"
                 placeholder="37"
               />
@@ -176,7 +176,7 @@
                   type="radio"
                   name="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
                   minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)"
-                  value="tak"
+                  value="Nie"
                   id="q1a"
                   required
                 />
@@ -190,8 +190,9 @@
                   type="radio"
                   name="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
                   minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)"
-                  value="nie"
+                  value="Tak"
                   required
+                  id="q1b"
                 />
                 <label
                   for="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
@@ -306,6 +307,7 @@
                 <input
                   type="radio"
                   name="Czy pobierasz rentę lub emeryturę?"
+                  id="q4a"
                   value="Nie"
                   required
                 />
@@ -499,8 +501,10 @@
             <div class="important_data">
               <p>
                 W celu podpisania umowy zgłoś się do działu KADR - weź z sobą
-                książeczką SANEPIDOWSKĄ i ksero legitymacji szkolnej.
+                książeczką SANEPIDOWSKĄ.
               </p>
+              <p>Jeżeli jesteś uczniem - weź ze sobą AKTUALNĄ legitymację szkolną i ksero legitymacji ( ksero przód i tył )</p>
+              <p>Jeżeli posiadasz grupę inwalidzką - weź ze sobą ORZECZENIE O NIEPEŁNOSPRAWNOŚCI</p>
             </div>
           </div>
           <div class="submit_box">

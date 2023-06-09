@@ -44,7 +44,7 @@ input[type="text"],input[type="email"]{
 .important_data{
     font-size: 2rem;
     color: yellow;
-    display: none;
+    display: block;
 }
 .query_data{
     max-width: 600px;

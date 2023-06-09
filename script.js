@@ -23,7 +23,6 @@ function querySchool() {
   const q3a = document.querySelector("#q3a");
   const q3b = document.querySelector("#q3b");
   const schoolBox = document.querySelector(".school_info");
-  const important = document.querySelector(".important_data");
 
   const schoolNr = document.getElementById("schoolNumber");
   const schoolName = document.getElementById("schoolName");
@@ -32,7 +31,7 @@ function querySchool() {
   q3a.addEventListener("change", () => {
     if (q3a.checked) {
       schoolBox.classList.remove("displayBox");
-      important.classList.remove("displayBox");
+   
 
       // schoolNr.removeAttribute('required')
       // schoolName.removeAttribute('required')
@@ -50,7 +49,7 @@ function querySchool() {
   q3b.addEventListener("change", () => {
     if (q3b.checked) {
       schoolBox.classList.add("displayBox");
-      important.classList.add("displayBox");
+      
 
       // schoolNr.setAttribute('required','')
       // schoolName.setAttribute('required','')
@@ -64,30 +63,43 @@ function querySchool() {
 }
 
 function queryAdditional() {
-  const pkt1 = document.querySelector("#q1a");
-  const pkt3 = document.querySelector("#q3a");
-  const pkt5 = document.querySelector("#q5a");
+  const pkt1false = document.querySelector("#q1a");
+  const pkt1true = document.querySelector('#q1b')
+  const pkt3false = document.querySelector("#q3a");
+  const pkt3true = document.querySelector('#q3b')
+  const pkt5false = document.querySelector("#q5a");
+  const pkt4false = document.querySelector('#q4a')
   const box = document.querySelector(".insurance_box");
 
   const noCase = document.getElementById("insuranceNo");
   const yesCase = document.getElementById("insuranceYes");
 
   document.addEventListener("change", () => {
-    if (pkt1.checked && pkt3.checked && pkt5.checked) {
-      box.classList.add("displayBox");
-      noCase.setAttribute("required", "");
-      yesCase.setAttribute("required", "");
-      noCase.required = true;
-      yesCase.required = true;
-    } else {
-      box.classList.remove("displayBox");
-      noCase.removeAttribute("required");
-      yesCase.removeAttribute("required");
-      noCase.required = false;
-      yesCase.required = false;
-      noCase.checked = false;
-      yesCase.checked = false;
-    }
+
+      if(pkt1true.checked){
+        box.classList.remove('displayBox')
+      }else if(pkt1false.checked && pkt3true.checked && pkt4false.checked){
+        box.classList.remove('displayBox')
+      }else{
+        box.classList.add('displayBox')
+      }
+
+
+    // if (pkt1.checked && pkt3.checked && pkt5.checked) {
+    //   box.classList.add("displayBox");
+    //   noCase.setAttribute("required", "");
+    //   yesCase.setAttribute("required", "");
+    //   noCase.required = true;
+    //   yesCase.required = true;
+    // } else {
+    //   box.classList.remove("displayBox");
+    //   noCase.removeAttribute("required");
+    //   yesCase.removeAttribute("required");
+    //   noCase.required = false;
+    //   yesCase.required = false;
+    //   noCase.checked = false;
+    //   yesCase.checked = false;
+    // }
   });
 }
 
@@ -258,7 +270,7 @@ function validatePassData() {
       }
       if (el.classList.contains("success")) {
         temp++;
-        if (temp === 9) {
+        if (temp === 7) {
           btn.removeAttribute("disabled");
          document.getElementById('subjectForm').value = `Nowe zgłoszenie od ${document.getElementById('name').value} ${document.getElementById('surname').value}`
         }
@@ -304,10 +316,10 @@ function validateAllInputs() {
     document.getElementById("postcode"),
     document.getElementById("postcodeError")
   );
-  validateName(
-    document.getElementById("street"),
-    document.getElementById("streetError")
-  );
+  // validateName(
+  //   document.getElementById("street"),
+  //   document.getElementById("streetError")
+  // );
   validateName(
     document.getElementById("state"),
     document.getElementById("stateError")
