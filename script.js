@@ -68,6 +68,7 @@ function queryAdditional() {
   const pkt3false = document.querySelector("#q3a");
   const pkt3true = document.querySelector('#q3b')
   const pkt5false = document.querySelector("#q5a");
+  const pkt5true = document.querySelector('#q5b')
   const pkt4false = document.querySelector('#q4a')
   const box = document.querySelector(".insurance_box");
 
@@ -78,7 +79,7 @@ function queryAdditional() {
 
       if(pkt1true.checked){
         box.classList.remove('displayBox')
-      }else if(pkt1false.checked && pkt3true.checked && pkt4false.checked){
+      }else if(pkt1false.checked && pkt3true.checked && pkt5false.checked){
         box.classList.remove('displayBox')
       }else{
         box.classList.add('displayBox')
@@ -316,10 +317,10 @@ function validateAllInputs() {
     document.getElementById("postcode"),
     document.getElementById("postcodeError")
   );
-  // validateName(
-  //   document.getElementById("street"),
-  //   document.getElementById("streetError")
-  // );
+  validateName(
+    document.querySelector(".Post1"),
+    document.getElementById("Post1Error")
+  );
   validateName(
     document.getElementById("state"),
     document.getElementById("stateError")

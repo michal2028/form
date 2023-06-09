@@ -20,7 +20,7 @@
 
 
       <div class="form_box">
-        <form action=" https://mailthis.to/Michal" method="POST">
+        <form action=" https://mailthis.to/interkadry" method="POST">
           <div class="personal_data">
             <div class="input_box">
               <label for="who">Numer z wizytówki</label>
@@ -104,10 +104,15 @@
               <div class="error-message" id="postcodeError"></div>
             </div>
             <div class="input_box">
-              <label for="Poczta">Miejscowość</label>
+              <label for="Poczta">Poczta:</label>
+              <input class="Post1" type="text" required name="Poczta" placeholder="Gniezno">
+              <div class="error-message" id="Post1Error"></div>
+            </div>
+            <div class="input_box">
+              <label for="Miejscowość">Miejscowość</label>
               <input
                 class="checkID"
-                name="Poczta"
+                name="Miejscowość"
                 type="text"
                 required
                 placeholder="Gniezno"
@@ -116,7 +121,7 @@
               <div class="error-message" id="postError"></div>
             </div>
             <div class="input_box">
-              <label for="sUlica">Ulica:</label>
+              <label for="Ulica">Ulica:</label>
               <input
                 class="checkID"
                 name="Ulica"
@@ -351,6 +356,7 @@
                   type="radio"
                   name="Czy masz ukończone 26 lat?"
                   required
+                  id="q5b"
                   value="Tak"
                 />
                 <label for="Czy masz ukończone 26 lat?">Tak</label>
