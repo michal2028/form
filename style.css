@@ -1,9 +1,9 @@
-html{
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap');
+html,body{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -15,13 +15,17 @@ html{
     align-items: center;
     flex-direction: column;
     color:azure;
-    background-color: #7c7373;
+    background-color: rgb(209, 206, 206);
 }
 
 .form_box{
     display: flex;
     flex-direction: column;
+    background-color: black;
+    opacity: .2;
+    border-radius: 10px;
 }
+
 
 input[type="text"],input[type="email"]{
     padding: .5em;
@@ -31,7 +35,7 @@ input[type="text"],input[type="email"]{
 .personal_data, .query_data{
     border: 1px solid white;
     padding: 1.5em;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .error-message{

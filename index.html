@@ -4,23 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formularz testowy</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+    <title>Formularz zgłoszeniowy InterKadry</title>
+
+    <link rel="stylesheet" href="./css/new_style.css" />
   </head>
   <body>
     <div class="section">
-      <h1>Formularz</h1>
+      <h1>Formularz InterKadry.pl</h1>
 
 
 
       <div class="form_box">
-        <form action=" https://mailthis.to/interkadry" method="POST">
+        <form action=" https://mailthis.to/Michal" method="POST">
           <div class="personal_data">
             <div class="input_box">
               <label for="who">Numer z wizytówki</label>
@@ -56,10 +51,18 @@
               <label for="PESELl">PESEL:</label>
               <input
                 class="checkID"
-                name="PESEL"
+               
                 type="text"
                 id="pesel"
                 placeholder="67121309469"
+                required
+              />
+              <input
+                style="display: none;"
+                name="PESEL"
+                type="text"
+                id="peselFinal"
+                
                 required
               />
               <div class="error-message" id="peselError"></div>
@@ -470,10 +473,17 @@
                   <p>Wprowadź numer konta bankowego:</p>
                   <input
                     type="text"
-                    name="Wprowadź numer konta bankowego"
                     class="accountNr"
                     id="paymentAccountInput"
                   />
+                  <input
+                    type="text"
+                    name="Wprowadź numer konta bankowego"
+                    style="display: none;"
+                    id="paymentAccountInputFinal"
+                  />
+                  
+                  <div class="paymentError"></div>
                 </div>
               </fieldset>
             </div>
@@ -511,6 +521,7 @@
               </p>
               <p>Jeżeli jesteś uczniem - weź ze sobą AKTUALNĄ legitymację szkolną i ksero legitymacji ( ksero przód i tył )</p>
               <p>Jeżeli posiadasz grupę inwalidzką - weź ze sobą ORZECZENIE O NIEPEŁNOSPRAWNOŚCI</p>
+              <p>Jeżeli znalazłeś/aś błąd w formularzu lub masz problem z jego wypełnieniem - zgłoś to na e-mail: rachinfo@wp.pl lub skontakuj się telefonicznie pod numer: +48 601 948 022 </p>
             </div>
           </div>
           <div class="submit_box">
@@ -518,7 +529,7 @@
             <!-- <input type="text" name="_honey" style="display:none"> -->
             <!-- <input type="hidden" name="_captcha" value="true"> -->
             <input type="hidden" name="_honeypot" value="">
-            <input type="hidden" name="_after" value="https://michal2028.github.io/form/formExit.html">
+            <input type="hidden" name="_after" value="https://www.interkadry.pl/form_exit.html">
             <input type="hidden" id="subjectForm" name="_subject" value="Nowe zgłoszenie!" />
             <input class="submitBtn" type="submit" value="Wyślij" />
           </div>

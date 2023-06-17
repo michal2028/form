@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;600&display=swap");
+html, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Noto Sans', sans-serif;
+  color: #666666;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #7A5CFA;
+  font-size: 2rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 5em;
+}
+
+body h1 {
+  text-align: center;
+  color: #fff;
+  padding: 1em;
+}
+
+@media (max-width: 350px) {
+  body {
+    padding: 0;
+  }
+}
+
+.form_box {
+  background-color: #fff;
+  padding: 3em;
+  border-radius: 8px;
+}
+
+.form_box .personal_data h2 {
+  text-align: center;
+  margin: 2em 0;
+}
+
+.form_box .personal_data .input_box {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.form_box .personal_data .input_box .error {
+  border: 2px solid #EB5757;
+}
+
+.form_box .personal_data .input_box .success {
+  border: 2px solid #45a405;
+}
+
+.form_box .personal_data label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.query_data .school_info {
+  display: none;
+}
+
+.query_data .displayBox {
+  display: block;
+}
+
+.query_data .query .payment_box {
+  display: none;
+}
+
+.query_data .query .displayBox {
+  display: block;
+}
+
+.query_data .query .insurance_box {
+  background-color: red;
+}
+
+input[type="text"], input[type="email"] {
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 2rem;
+  border: 2px solid #8d8d8d;
+}
+
+input[type="radio"] {
+  font-family: system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1em auto;
+      grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
+
+input[type="text"]:focus {
+  border: 2px solid  #7A5CFA;
+  outline: none;
+}
+
+.error-message {
+  width: 100%;
+  font-size: 18px;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  display: none;
+  color: #EB5757;
+}
+/*# sourceMappingURL=new_style.css.map */

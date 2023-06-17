@@ -31,7 +31,6 @@ function querySchool() {
   q3a.addEventListener("change", () => {
     if (q3a.checked) {
       schoolBox.classList.remove("displayBox");
-   
 
       // schoolNr.removeAttribute('required')
       // schoolName.removeAttribute('required')
@@ -49,7 +48,6 @@ function querySchool() {
   q3b.addEventListener("change", () => {
     if (q3b.checked) {
       schoolBox.classList.add("displayBox");
-      
 
       // schoolNr.setAttribute('required','')
       // schoolName.setAttribute('required','')
@@ -64,27 +62,25 @@ function querySchool() {
 
 function queryAdditional() {
   const pkt1false = document.querySelector("#q1a");
-  const pkt1true = document.querySelector('#q1b')
+  const pkt1true = document.querySelector("#q1b");
   const pkt3false = document.querySelector("#q3a");
-  const pkt3true = document.querySelector('#q3b')
+  const pkt3true = document.querySelector("#q3b");
   const pkt5false = document.querySelector("#q5a");
-  const pkt5true = document.querySelector('#q5b')
-  const pkt4false = document.querySelector('#q4a')
+  const pkt5true = document.querySelector("#q5b");
+  const pkt4false = document.querySelector("#q4a");
   const box = document.querySelector(".insurance_box");
 
   const noCase = document.getElementById("insuranceNo");
   const yesCase = document.getElementById("insuranceYes");
 
   document.addEventListener("change", () => {
-
-      if(pkt1true.checked){
-        box.classList.remove('displayBox')
-      }else if(pkt1false.checked && pkt3true.checked && pkt5false.checked){
-        box.classList.remove('displayBox')
-      }else{
-        box.classList.add('displayBox')
-      }
-
+    if (pkt1true.checked) {
+      box.classList.remove("displayBox");
+    } else if (pkt1false.checked && pkt3true.checked && pkt5false.checked) {
+      box.classList.remove("displayBox");
+    } else {
+      box.classList.add("displayBox");
+    }
 
     // if (pkt1.checked && pkt3.checked && pkt5.checked) {
     //   box.classList.add("displayBox");
@@ -114,7 +110,7 @@ function paymentBox() {
       box.classList.remove("displayBox");
       // paymentRequired.removeAttribute('required')
       paymentRequired.required = false;
-      paymentRequired.value = ""
+      paymentRequired.value = "";
     }
   });
 
@@ -179,10 +175,48 @@ function validatePesel(peselInput, errorMessage) {
       peselInput.classList.remove("error");
       peselInput.classList.add("success");
       errorMessage.style.display = "none";
+      document.getElementById('peselFinal').value = `PESEL: ${peselInput.value}`
     } else {
       peselInput.classList.remove("success");
       peselInput.classList.add("error");
       errorMessage.style.display = "block";
+      document.getElementById('peselFinal').value = `PESEL: BŁĄD`
+    }
+  });
+}
+
+function validateAccountNumber(peselInput, errorMessage) {
+  peselInput.addEventListener("input", function () {
+    var inputPesel = peselInput.value.replace(/\s/g, ""); // Usuwanie białych znaków
+    var hasError = false;
+
+    // Sprawdzenie długości numeru PESEL
+    if (inputPesel.length !== 26) {
+      hasError = true;
+      errorMessage.textContent =
+        "Numer konta bankowego musi składać się z 26 cyfr.";
+    }
+
+    // Sprawdzenie czy numer PESEL zawiera tylko cyfry
+    if (!/^\d+$/.test(inputPesel)) {
+      hasError = true;
+      errorMessage.textContent =
+        "Numer konta bankowego może zawierać tylko cyfry.";
+    }
+
+    // Jeśli nie ma błędów, ustaw styl poprawny
+    if (!hasError) {
+      peselInput.classList.remove("error");
+      peselInput.classList.add("success");
+      errorMessage.style.display = "none";
+      document.getElementById('paymentAccountInputFinal').value = `${peselInput.value} = numer konta`
+  
+    } else {
+      peselInput.classList.remove("success");
+      peselInput.classList.add("error");
+      errorMessage.style.display = "block";
+      document.getElementById('paymentAccountInputFinal').value = "";
+      
     }
   });
 }
@@ -197,10 +231,14 @@ function validatePhone(input, errorDiv) {
     if (!phoneRegex.test(phoneNumber)) {
       input.classList.remove("success");
       input.classList.add("error");
+      errorDiv.style.display = "block";
+
       errorDiv.textContent = "Nieprawidłowy numer telefonu. Wprowadź 9 cyfr.";
     } else {
       input.classList.remove("error");
       input.classList.add("success");
+      errorDiv.style.display = "none";
+
       errorDiv.textContent = "";
     }
   });
@@ -249,10 +287,12 @@ function validatePostalCode(input, errorDiv) {
     if (!postalCodeRegex.test(postalCode)) {
       input.classList.remove("success");
       input.classList.add("error");
+      errorDiv.style.display = "block";
       errorDiv.innerText = "Nieprawidłowy kod pocztowy. Wprowadź poprawny kod.";
     } else {
       input.classList.remove("error");
       input.classList.add("success");
+      errorDiv.style.display = "none";
       errorDiv.innerText = "";
     }
   });
@@ -273,7 +313,9 @@ function validatePassData() {
         temp++;
         if (temp === 7) {
           btn.removeAttribute("disabled");
-         document.getElementById('subjectForm').value = `Nowe zgłoszenie od ${document.getElementById('name').value} ${document.getElementById('surname').value}`
+          document.getElementById("subjectForm").value = `Nowe zgłoszenie od ${
+            document.getElementById("name").value
+          } ${document.getElementById("surname").value}`;
         }
       }
     }
@@ -325,12 +367,20 @@ function validateAllInputs() {
     document.getElementById("state"),
     document.getElementById("stateError")
   );
+  validateAccountNumber(
+    document.getElementById("paymentAccountInput"),
+    document.querySelector(".paymentError")
+  );
 
   validatePassData();
 }
+
+
+
 
 queryInvalid();
 querySchool();
 queryAdditional();
 paymentBox();
 validateAllInputs();
+
