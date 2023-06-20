@@ -31,21 +31,17 @@ body h1 {
   padding: 1em;
 }
 
-@media (max-width: 350px) {
-  body {
-    padding: 0;
-  }
-}
-
 .form_box {
   background-color: #fff;
   padding: 3em;
   border-radius: 8px;
+  max-width: 900px;
 }
 
 .form_box .personal_data h2 {
   text-align: center;
   margin: 2em 0;
+  padding: 0 1em;
 }
 
 .form_box .personal_data .input_box {
@@ -77,24 +73,143 @@ body h1 {
           align-items: center;
 }
 
-.query_data .school_info {
+.form_box .query_data h2 {
+  text-align: center;
+}
+
+.form_box .query_data .school_info {
   display: none;
 }
 
-.query_data .displayBox {
+.form_box .query_data .displayBox {
   display: block;
 }
 
-.query_data .query .payment_box {
+.form_box .query_data .query {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.form_box .query_data .query .payment_box {
   display: none;
 }
 
-.query_data .query .displayBox {
+.form_box .query_data .query .insurance_box {
+  display: none;
+  border: 2px solid #45a405;
+}
+
+.form_box .query_data .query .displayBox {
   display: block;
 }
 
-.query_data .query .insurance_box {
-  background-color: red;
+.form_box .query_data .query fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 8px;
+}
+
+.form_box .query_data .query fieldset .q2select_box select {
+  padding: .5em 1em;
+}
+
+.form_box .query_data .query .answers {
+  margin-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form_box .query_data .query .answers .answer-simple {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form_box .query_data .query .school_info .school_info_input {
+  margin: 1em;
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.form_box .query_data .query .school_info .school_info_input label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 540px) {
+  .form_box {
+    padding: 1em 0;
+  }
+  .form_box .personal_data .input_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form_box .personal_data .input_box input {
+    max-width: 250px;
+  }
+  .form_box .query_data {
+    padding: 1em;
+  }
+  .form_box .query_data .query h3 {
+    text-align: center;
+  }
+  .form_box .query_data .query .school_info .school_info_input {
+    margin: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .form_box .query_data .query .school_info .school_info_input input {
+    width: 150px;
+  }
+}
+
+@media (max-width: 350px) {
+  body {
+    padding: 0;
+  }
 }
 
 input[type="text"], input[type="email"] {
@@ -116,7 +231,7 @@ input[type="radio"] {
   gap: 0.5em;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus, input[type="email"]:focus {
   border: 2px solid  #7A5CFA;
   outline: none;
 }

@@ -180,7 +180,8 @@
                   Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
                   minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)
                 </legend>
-                <input
+                <div class="answers">
+                  <input
                   type="radio"
                   name="Czy aktualnie jesteś zatrudniony w innej firmie z co najmniej
                   minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)"
@@ -207,13 +208,16 @@
                   minimalnym wynagrodzeniem (w 2023 r - 3490 zł brutto)"
                   >Tak</label
                 >
+                </div>
+                
               </fieldset>
             </div>
             <div class="query">
               <h3>Pkt. 2</h3>
               <fieldset>
                 <legend>Czy posiadasz grupę inwalidzką?</legend>
-                <input
+                <div class="answers">
+                  <input
                   type="radio"
                   name="Czy posiadasz grupę inwalidzką?"
                   id="q2a"
@@ -230,6 +234,8 @@
                   required
                 />
                 <label for="Czy posiadasz grupę inwalidzką?">Tak</label>
+                </div>
+               
 
                 <div class="q2select_box">
                   <p>Rodzaj grupy inwalidzkiej:</p>
@@ -253,8 +259,8 @@
                   legitymacji, nazwę szkoły, miejscowość w której szkoła się
                   znajduje.
                 </legend>
-
-                <input
+                <div class="answers">
+                  <input
                   type="radio"
                   required
                   name="Czy jesteś uczniem lub studentem?
@@ -273,6 +279,8 @@
                   id="q3b"
                 />
                 <label for="Czy jesteś uczniem lub studentem?">Tak</label>
+                </div>
+                
                 <div class="school_info">
                   <div class="school_info_input">
                     <label for="Numer legitymacji">Numer legitymacji:</label>
@@ -312,7 +320,9 @@
                   Czy pobierasz rentę lub emeryturę? Nie/tak-rentę/
                   tak-emeryturę
                 </legend>
-                <input
+               <div class="answers">
+                <div class="answer-simple">
+                  <input
                   type="radio"
                   name="Czy pobierasz rentę lub emeryturę?"
                   id="q4a"
@@ -320,17 +330,17 @@
                   required
                 />
                 <label for="Czy pobierasz rentę lub emeryturę?">Nie</label>
-
-                <input
-                  type="radio"
-                  name="Czy pobierasz rentę lub emeryturę?"
-                  value="Tak - rentę"
-                  required
-                />
-                <label for="Czy pobierasz rentę lub emeryturę?"
-                  >Tak - rentę</label
-                >
-
+                </div>
+               <div class="answer-simple">  <input
+                type="radio"
+                name="Czy pobierasz rentę lub emeryturę?"
+                value="Tak - rentę"
+                required
+              />
+              <label for="Czy pobierasz rentę lub emeryturę?"
+                >Tak - rentę</label
+              ></div>
+               <div class="answer-simple">
                 <input
                   type="radio"
                   name="Czy pobierasz rentę lub emeryturę?"
@@ -339,7 +349,12 @@
                 />
                 <label for="Czy pobierasz rentę lub emeryturę?"
                   >Tak - emeryturę</label
-                >
+                ></div>
+
+            
+
+               </div>
+                
               </fieldset>
             </div>
             <div class="query">
